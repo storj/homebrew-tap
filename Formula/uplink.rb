@@ -1,10 +1,9 @@
 class Uplink < Formula
-  desc "Uplink CLI for Storj DCS"
+  desc "Storj DCS client-side CLI"
   homepage "https://storj.io"
   version "1.89.5"
   license "AGPL-3.0-only"
 
-  depends_on "git"
   depends_on "go" => :optional
 
   on_macos do
@@ -54,6 +53,6 @@ class Uplink < Formula
   end
 
   test do
-    system "#{bin}/uplink version"
+    system "#{bin}/uplink", "version"
   end
 end
